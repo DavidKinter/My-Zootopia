@@ -1,6 +1,8 @@
 # Workspace-specific files
 *.code-workspace
 code-workspace/
+.venv/
+pyvenv.cfg
 
 # Node.js dependencies and logs
 node_modules/
