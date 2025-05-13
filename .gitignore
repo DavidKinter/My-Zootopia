@@ -4,6 +4,10 @@ code-workspace/
 .venv/
 pyvenv.cfg
 
+# Timestamped backup zip files
+[0-9][0-9]-[0-9][0-9]-[0-9][0-9]_[0-9][0-9]_[0-9][0-9]_[0-9][0-9]_*.zip
+../backup_script/create_zipped_backup.py
+
 # Node.js dependencies and logs
 node_modules/
 npm-debug.log*
