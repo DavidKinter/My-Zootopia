@@ -1,0 +1,72 @@
+# Workspace-specific files
+*.code-workspace
+code-workspace/
+
+# Node.js dependencies and logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# It's generally recommended to commit package-lock.json or yarn.lock
+
+# Build Output / Bundles
+# Common directories for compiled code or packaged applications
+dist/
+build/
+out/
+# public/ # Uncomment if your /public directory contains only build artifacts and not source files
+
+# IDE / Editor specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sublime-project
+*.sublime-workspace
+
+# Operating System generated files
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+
+# Log Files
+*.log
+logs/
+
+# Environment Variables
+# Commit .env.example or .env.template, but ignore actual .env files
+.env
+.env.local
+.env.*.local
+!.env.example
+!.env.sample
+
+# Temporary Files (e.g. editor backup files)
+*~
+*.swp
+*.swo
+
+# Coverage Reports
+coverage/
+.nyc_output/
+
+# Optional: Add tool-specific cache or build directories below
+# .cache/ # e.g., for Parcel, Gatsby
+# .parcel-cache/ # Parcel 2
+# .webpack/ # Webpack build artifacts
+# *.tsbuildinfo # TypeScript incremental build info
+# .next/ # Next.js build output
+# Local Netlify folder
+.netlify
+
+# Python virtual environment
+venv/ 
+# (Or use the specific name of your virtual environment folder if different)
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
