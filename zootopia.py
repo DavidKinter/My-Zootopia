@@ -120,10 +120,12 @@ def create_str_for_template():
     for animal in animals_list:
         animal_strings.append(
             f'<li class="cards__item">'
-            f"Name: {animal["name"]}<br/>\n"
-            f"Diet: {animal["diet"]}<br/>\n"
-            f"Location: "f"{animal["location"]}<br/>\n"
-            f"Type: {animal["type"]}<br/>\n"
+            f'<div class="card__title">{animal["name"]}</div>'
+            f'<p class="card__text">'
+            f"<strong>Diet:</strong> {animal["diet"]}<br/>"
+            f"<strong>Location:</strong> {animal["location"]}<br/>"
+            f"<strong>Type:</strong> {animal["type"]}<br/>"
+            f"</p>"
             f"</li>"
             )
     return "\n\n".join(animal_strings)
