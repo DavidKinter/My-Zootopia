@@ -108,6 +108,22 @@ def return_list_for_template():
         animals_list.append(processed_animal_dict)
     return animals_list
 
+def serialize_animal(animal_obj):
+    """
+    Helper function. Takes a processed animal dict object and returns
+    an HTML string representing a single animal card item.
+    """
+    output = (
+            f'<li class="cards__item">'
+            f'<div class="card__title">{animal_obj["name"]}</div>'
+            f'<p class="card__text">'
+            f"<strong>Diet:</strong> {animal_obj["diet"]}<br/>"
+            f"<strong>Location:</strong> {animal_obj["location"]}<br/>"
+            f"<strong>Type:</strong> {animal_obj["type"]}<br/>"
+            f"</p>"
+            f"</li>"
+            )
+    return output
 
 def create_str_for_template():
     """
@@ -117,17 +133,8 @@ def create_str_for_template():
     """
     animals_list = return_list_for_template()
     animal_strings = []
-    for animal in animals_list:
-        animal_strings.append(
-            f'<li class="cards__item">'
-            f'<div class="card__title">{animal["name"]}</div>'
-            f'<p class="card__text">'
-            f"<strong>Diet:</strong> {animal["diet"]}<br/>"
-            f"<strong>Location:</strong> {animal["location"]}<br/>"
-            f"<strong>Type:</strong> {animal["type"]}<br/>"
-            f"</p>"
-            f"</li>"
-            )
+    for animal_obj in animals_list:
+        animal_strings.append(serialize_animal(animal_obj))
     return "\n\n".join(animal_strings)
 
 
