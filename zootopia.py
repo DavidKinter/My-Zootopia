@@ -52,7 +52,7 @@ def format_value(value_str):
     makes sure all items from the JSON file are properly, and identically,
     formatted.
     """
-    if (isinstance(value_str, str) # Checks if 'value_str' is type(str)
+    if (isinstance(value_str, str)  # Checks if 'value_str' is type(str)
             and value_str.lower() != DEFAULT_NA_VALUE.lower()):
         title_cased_str = value_str.title()
         # Correct apostrophe followed by 'S' (for Darwin's Fox)
@@ -118,11 +118,14 @@ def create_str_for_template():
     animals_list = return_list_for_template()
     animal_strings = []
     for animal in animals_list:
-        animal_strings.append(f"Name: {animal["name"]}\n"
-                              f"Diet: {animal["diet"]}\n"
-                              f"Location: "f"{animal["location"]}\n"
-                              f"Type: {animal["type"]}"
-                              )
+        animal_strings.append(
+            f'<li class="cards__item">'
+            f"Name: {animal["name"]}<br/>\n"
+            f"Diet: {animal["diet"]}<br/>\n"
+            f"Location: "f"{animal["location"]}<br/>\n"
+            f"Type: {animal["type"]}<br/>\n"
+            f"</li>"
+            )
     return "\n\n".join(animal_strings)
 
 
